@@ -1,38 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <h1>Hello World</h1>
-    <h2></h2>Hello World</h2>
-    <h3>Hello World</h3>
-    <h4>Hello World</h4>
-    <h5>Hello World</h5>
-    <h6>Hello World</h6>
-    <h7>Hello World</h7>
-    <table border="1">
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-        </tr>
-    </table>
-    <a href="https://www.google.com">Google</a>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+<body>
+  <div id="root"></div>
+
+  <button onclick="fetchData()">调用 API</button>
+
+  <script>
+    async function fetchData() {
+      const res = await fetch("https://opposition-homes-excluded-sons.trycloudflare.com/api/hello");
+      const data = await res.json();
+      alert(JSON.stringify(data));
+    }
+  </script>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
